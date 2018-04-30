@@ -1,0 +1,21 @@
+<h2>Novo Cliente</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form novalidate name="AddNewForm" id="add-new-form" method="post" action="">
+            <div class="form-group">
+                <label>Id:</label>
+                <input class="form-control" type="number" ng-model="cliente.id" required />
+            </div>
+            <div class="form-group">
+                <label>Nome:</label>
+                <input class="form-control" type="text" ng-model="cliente.nome" required />
+            </div>
+            <div class="form-group">
+                <label>CPF</label>
+                <input class="form-control" type="text" ng-model="cliente.cpf" required maxlength="14"/>
+            </div>
+            <button class="btn btn-primary" ng-disabled="AddNewForm.$invalid || isUnchanged(user)" id="add-new-btn" ng-click="insert(cliente)">Salvar Cliente</button>
+            <a href="#/" class="btn">Cancelar</a>
+        </form>
+    </div>
+</div>
